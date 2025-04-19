@@ -19,6 +19,11 @@
   "categories": [
     "Themes"
   ],
+  "icon": "AlienSpeak.gif",,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "contributes": {
     "themes": [
       {
