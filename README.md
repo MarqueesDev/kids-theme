@@ -84,7 +84,6 @@ Just open the `theme.json` file and edit the values, or use the built-in theme e
 To get the best experience with the **Pitch Black** theme, we recommend adding the following settings to your `settings.json` file:
 
 ```json
-<pre><code>
 {
   "workbench.startupEditor": "none",
   "editor.fontSize": 17,
@@ -114,7 +113,6 @@ To get the best experience with the **Pitch Black** theme, we recommend adding t
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "runme.flags.disableSaveRestriction": true
 }
-</pre></code>
 
 ---
 
