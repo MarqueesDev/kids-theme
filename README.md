@@ -113,6 +113,7 @@ To get the best experience with the **Pitch Black** theme, we recommend adding t
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "runme.flags.disableSaveRestriction": true
 }
+```
 
 ---
 
