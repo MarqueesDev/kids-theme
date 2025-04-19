@@ -79,7 +79,7 @@ Just open the `theme.json` file and edit the values, or use the built-in theme e
 
 ## 🙌 Credits
 
-> Created with ❤️ by [Alan Marques (M0rdek4y)](https://github.com/M0rdek4y)
+> Created with ❤️ by [Alan Marques (M0rdek4y)](https://github.com/MarqueesDev)
 
 ---
 
