@@ -19,6 +19,9 @@
   "categories": [
     "Themes"
   ],
+  "extensionDependencies": [
+    "PKief.material-icon-theme"
+  ],
   "icon": "AlienSpeak.gif",
   "repository": {
     "type": "git",
