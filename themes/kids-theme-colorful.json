@@ -386,7 +386,7 @@
 			"source.json"
 		],
 		"settings": {
-			"foreground": "#f0a3ff"
+			"foreground": "#9CDCFE"
 		}
 	},
 	{
@@ -447,7 +447,7 @@
 				"source.json.comments"
 			],
 			"settings": {
-				"foreground": "#0bf7b0d0"
+				"foreground": "#7DEB41D0"
 			}
 		},
 		{
