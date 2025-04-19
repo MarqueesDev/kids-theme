@@ -1,5 +1,32 @@
 {
 	"name": "kids-theme",
+	"workbench.startupEditor": "none",
+    "editor.fontSize": 17,
+    "editor.lineNumbers": "on",
+    "editor.wordWrap": "on",
+    "explorer.compactFolders": false,
+    "code-runner.runInTerminal": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "python": "cls ; python -u"
+    },
+    "code-runner.ignoreSelection": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.editorAssociations": {
+        "*.exe": "default",
+        "*.pf": "default"
+    },
+    "explorer.confirmDelete": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.autofetch": true,
+    "files.autoSave": "afterDelay",
+    "files.associations": {
+        "*.cfg": "cpp"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Pitch Black",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "runme.flags.disableSaveRestriction": true,
 	"colors": {
 		"foreground": "#cccccc",
 		"focusBorder": "#007fd4",
@@ -256,7 +283,7 @@
 				"keyword"
 			],
 			"settings": {
-				"foreground": "#bd62fa"
+				"foreground": "#0bf7b0d0"
 			}
 		},
 		{
@@ -302,6 +329,7 @@
 				"entity.name.type"
 			],
 			"settings": {
+				"foreground": "#0bf7b0d0"
 			}
 		},
 		{
@@ -343,7 +371,7 @@
 			"scope": ["keyword.operator.class.php"
 		],
 		"settings": {
-			"foreground": "#fc6f6fd3"
+			"foreground": "#5cc1e9"
 		}
 	},
 	{
@@ -360,6 +388,20 @@
 		"settings": {
 			"foreground": "#f0a3ff"
 		}
+	},
+	{
+		"scope": [
+			"support.type.property-name.json",
+			"string.json",
+			"meta.structure.dictionary.json",
+			"meta.structure.array.json",
+			"meta.structure.dictionary.value.json",
+			"meta.structure.dictionary.json",
+			"source.json"
+			],
+			"settings": {
+				"foreground": "#9CDCFE"
+				}
 	},
 	{
 		"scope": [

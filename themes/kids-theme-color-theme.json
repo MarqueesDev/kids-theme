@@ -1,5 +1,32 @@
 {
 	"name": "kids-theme",
+	"workbench.startupEditor": "none",
+    "editor.fontSize": 17,
+    "editor.lineNumbers": "on",
+    "editor.wordWrap": "on",
+    "explorer.compactFolders": false,
+    "code-runner.runInTerminal": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "python": "cls ; python -u"
+    },
+    "code-runner.ignoreSelection": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.editorAssociations": {
+        "*.exe": "default",
+        "*.pf": "default"
+    },
+    "explorer.confirmDelete": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.autofetch": true,
+    "files.autoSave": "afterDelay",
+    "files.associations": {
+        "*.cfg": "cpp"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Pitch Black",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "runme.flags.disableSaveRestriction": true,
 	"colors": {
 	"foreground": "#cccccc",
     "focusBorder": "#007fd4",
