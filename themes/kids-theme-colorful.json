@@ -351,10 +351,12 @@
 		"scope": [
 			"support.type.property-name.json.comments",
 			"string.json.comments",
+			"string.json",
 			"meta.structure.dictionary.json.comments",
 			"meta.structure.dictionary.value.json.comments",
 			"meta.structure.array.json.comments",
-			"source.json.comments"
+			"source.json.comments",
+			"source.json"
 		],
 		"settings": {
 			"foreground": "#f0a3ff"
