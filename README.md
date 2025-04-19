@@ -85,4 +85,4 @@ Just open the `theme.json` file and edit the values, or use the built-in theme e
 
 ## 🧠 License
 
-MIT License — Free to use, modify, and share.
+© MIT License — Free to use, modify, and share.
