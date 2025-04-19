@@ -19,10 +19,10 @@
   "categories": [
     "Themes"
   ],
-  "icon": "AlienSpeak.gif",,
+  "icon": "AlienSpeak.gif",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://raw.githubusercontent.com/MarqueesDev/kids-theme/refs/heads/main/AlienSpeak.gif"
   },
   "contributes": {
     "themes": [
