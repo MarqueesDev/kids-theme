@@ -31,6 +31,32 @@ Realce de sintaxe para:
 `.cpp`, `.py`, `.sh`, `.bash`, `.zsh`, `.cfg`, `.ini`, `.properties`,  
 `.env`, `.markdown`, `.php`, `.blade.php`
 
+Extensões personalizadas podem ser suportadas via `settings.json`.
+
+---
+
+## 🖼️ Visualização
+
+> _"Tão escuro que absorve seus pensamentos..."_
+
+![Preview](https://github.com/MarqueesDev/kids-theme/blob/main/screenshots/preview.png?raw=true)
+
+---
+
+## 📌 Por que usar o Pitch Black?
+
+- Perfeito para **displays OLED** (economiza energia)
+- Mais agradável aos olhos do que temas cinza escuro
+- Ótimo para programar à noite ou para tarefas que exigem concentração
+- Reduz a desordem visual com uma abordagem **minimalista**
+
+---
+
+## 🛠️ Personalização
+
+Quer ajustar as cores ou adicionar suporte para mais tipos de arquivos?  
+Basta abrir o arquivo `theme.json` e editar os valores, ou usar o editor de temas integrado no VS Code.
+
 ---
 
 ## 🛠️ Configurações Recomendadas
@@ -66,12 +92,6 @@ Realce de sintaxe para:
   "runme.flags.disableSaveRestriction": true
 }
 ```
-
----
-
-## 🖼️ Visualização
-
-![Preview](https://github.com/MarqueesDev/kids-theme/blob/main/screenshots/preview.png?raw=true)
 
 ---
 
