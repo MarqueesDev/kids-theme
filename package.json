@@ -2,7 +2,7 @@
   "name": "kids-theme",
   "displayName": "KIDS THEME",
   "description": "🎨 A pitch-black theme, designed to follow the color standards of VS Code itself — perfect for those who find VS Code themes too light. Also supports .cfg files!",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": {
     "name": "Alan Marques",
     "email": "dev.alanmarques@gmail.com",
@@ -13,6 +13,7 @@
     "type": "git",
     "url": "https://github.com/MarqueesDev/kids-theme"
   },
+  "icon": "./AlienSpeak.gif",
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -22,11 +23,6 @@
   "extensionDependencies": [
     "PKief.material-icon-theme"
   ],
-  "icon": "AlienSpeak.gif",
-  "repository": {
-    "type": "git",
-    "url": "https://raw.githubusercontent.com/MarqueesDev/kids-theme/refs/heads/main/AlienSpeak.gif"
-  },
   "contributes": {
     "themes": [
       {
