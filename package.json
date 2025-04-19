@@ -1,0 +1,26 @@
+{
+  "name": "kids-theme",
+  "displayName": "KIDS THEME",
+  "description": "A pitch-black theme, designed to follow the color standards of VS Code itself, but for those who find VS Code themes too light (It has compatibility with files with the .cfg extension).",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "kids-theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/kids-theme-color-theme.json"
+      },
+      {
+        "label": "kids-theme-font-colorized",
+        "uiTheme": "vs-dark",
+        "path": "./themes/kids-theme-font-colorized.json"
+      }
+    ]
+  }
+}
