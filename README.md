@@ -79,6 +79,45 @@ Just open the `theme.json` file and edit the values, or use the built-in theme e
 
 ---
 
+## 🛠️ Recommended Settings
+
+To get the best experience with the **Pitch Black** theme, we recommend adding the following settings to your `settings.json` file:
+
+```json
+<pre><code>
+{
+  "workbench.startupEditor": "none",
+  "editor.fontSize": 17,
+  "editor.lineNumbers": "on",
+  "editor.wordWrap": "on",
+  "explorer.compactFolders": false,
+  "code-runner.runInTerminal": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    "python": "cls ; python -u"
+  },
+  "code-runner.ignoreSelection": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.editorAssociations": {
+    "*.exe": "default",
+    "*.pf": "default"
+  },
+  "explorer.confirmDelete": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "git.autofetch": true,
+  "files.autoSave": "afterDelay",
+  "files.associations": {
+    "*.cfg": "cpp"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Pitch Black",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "runme.flags.disableSaveRestriction": true
+}
+</pre></code>
+
+---
+
 ## 🙌 Credits
 
 > Created with ❤️ by [Alan Marques (M0rdek4y)](https://github.com/MarqueesDev)
