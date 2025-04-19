@@ -47,6 +47,8 @@ Supports syntax highlighting for:
 - `.properties`
 - `.env`
 - `.markdown`
+- `.php`
+- `.blade.php`
 
 
 Custom extensions can be supported via `settings.json`.
