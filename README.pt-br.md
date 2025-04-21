@@ -1,4 +1,4 @@
-# 🌑 Tema Pitch Black para VS Code
+# 🌑 Kids theme para VS Code
 
 Um **tema preto absoluto**, feito para seguir os **padrões visuais do VS Code** — mas pensado para quem acha os temas oficiais **claros demais**.  
 Inclui também **compatibilidade com arquivos `.cfg`**, garantindo consistência até nos arquivos personalizados.
@@ -7,10 +7,13 @@ Inclui também **compatibilidade com arquivos `.cfg`**, garantindo consistência
 
 ## ✨ Recursos
 
-- 🎨 Fundo preto profundo, confortável para os olhos  
-- 🧩 Alinhado com as cores nativas da interface do VS Code  
+- 🎨 Fundo **preto profundo**, confortável para os olhos  
+- 🧩 Alinhado com as cores nativas da **interface do VS Code**
 - 🗂️ Suporte estendido para arquivos `.cfg`  
 - 💻 Ideal para longas sessões de codificação ou ambientes escuros  
+- ⚙️ Instalação super fácil com atualizações automatizadas: o tema aplica automaticamente as configurações no `settings.json` para uma experiência pronta para usar
+
+- 📦 Já vem com o ***`Material Icon Theme`*** ativado para uma visualização moderna e organizada dos arquivos
 
 ---
 
@@ -27,9 +30,27 @@ Inclui também **compatibilidade com arquivos `.cfg`**, garantindo consistência
 
 Realce de sintaxe para:
 
-`.js`, `.ts`, `.json`, `.yaml`, `.yml`, `.xml`, `.html`, `.css`, `.sql`,  
-`.cpp`, `.py`, `.sh`, `.bash`, `.zsh`, `.cfg`, `.ini`, `.properties`,  
-`.env`, `.markdown`, `.php`, `.blade.php`
+- `.js`
+- `.ts`
+- `.json`
+- `.yaml`
+- `.yml`
+- `.xml`
+- `.html`
+- `.css`
+- `.sql`
+- `.cpp`
+- `.py`
+- `.sh`
+- `.bash`
+- `.zsh`
+- `.cfg`
+- `.ini`
+- `.properties`
+- `.env`
+- `.markdown`
+- `.php`
+- `.blade.php`
 
 Extensões personalizadas podem ser suportadas via `settings.json`.
 
@@ -43,7 +64,7 @@ Extensões personalizadas podem ser suportadas via `settings.json`.
 
 ---
 
-## 📌 Por que usar o Pitch Black?
+## 📌 Por que usar o Kids Theme?
 
 - Perfeito para **displays OLED** (economiza energia)
 - Mais agradável aos olhos do que temas cinza escuro
@@ -55,11 +76,14 @@ Extensões personalizadas podem ser suportadas via `settings.json`.
 ## 🛠️ Personalização
 
 Quer ajustar as cores ou adicionar suporte para mais tipos de arquivos?  
-Basta abrir o arquivo `theme.json` e editar os valores, ou usar o editor de temas integrado no VS Code.
+Basta abrir o arquivo `theme.json` e editar os valores, use o editor de temas integrado no VS Code, 
+and even if you want you can edit it through your `settings.json`.
 
 ---
 
 ## 🛠️ Configurações Recomendadas
+
+> Para garantir a melhor experiência com o **Kids Theme**, recomendamos aplicar as configurações abaixo no seu `settings.json` — agora automatizadas para uma instalação ainda mais fácil e prática!
 
 ```json
 {
@@ -80,7 +104,6 @@ Basta abrir o arquivo `theme.json` e editar os valores, ou usar o editor de tema
     "*.pf": "default"
   },
   "explorer.confirmDelete": false,
-  "liveServer.settings.donotShowInfoMsg": true,
   "git.autofetch": true,
   "files.autoSave": "afterDelay",
   "files.associations": {
@@ -89,7 +112,6 @@ Basta abrir o arquivo `theme.json` e editar os valores, ou usar o editor de tema
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "KIDS THEME COLORFUL",
   "terminal.integrated.defaultProfile.windows": "Prompt de Comando",
-  "runme.flags.disableSaveRestriction": true
 }
 ```
 
@@ -103,4 +125,4 @@ Basta abrir o arquivo `theme.json` e editar os valores, ou usar o editor de tema
 
 ## 🧠 Licença
 
-Licença MIT — Livre para usar, modificar e compartilhar.
+[©Licença MIT](https://github.com/MarqueesDev/kids-theme/blob/main/LICENSE.txt) — Livre para usar, modificar e compartilhar.

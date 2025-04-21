@@ -1,4 +1,4 @@
-# 🌑 Pitch Black Theme for VS Code
+# 🌑 Kids Theme for VS Code
 
 A **pitch-black theme**, designed to follow the **color standards of VS Code** itself — but made for those who find the official VS Code themes **too light**.  
 It even includes **compatibility with `.cfg` files**, ensuring consistent visuals across custom configuration files.
@@ -7,10 +7,12 @@ It even includes **compatibility with `.cfg` files**, ensuring consistent visual
 
 ## ✨ Features
 
-- 🎨 Deep, eye-comforting **pitch-black** background
+- 🎨 Deep, eye-comforting **pitch black** background
 - 🧩 Fully aligned with **VS Code UI colors**
 - 🗂️ Enhanced support for `.cfg` files
 - 💻 Ideal for long coding sessions or low-light environments
+- ⚙️ Super easy installation with automated updates: the theme automatically applies the settings in `settings.json` for a ready-to-use experience
+- 📦 Already comes with the ***`Material Icon Theme`*** activated for a modern and organized view of files
 
 ---
 
@@ -50,7 +52,6 @@ Supports syntax highlighting for:
 - `.php`
 - `.blade.php`
 
-
 Custom extensions can be supported via `settings.json`.
 
 ---
@@ -63,7 +64,7 @@ Custom extensions can be supported via `settings.json`.
 
 ---
 
-## 📌 Why use Pitch Black?
+## 📌 Why use Kids Theme?
 
 - Perfect for **OLED displays** (saves energy)
 - Feels easier on the eyes than dark gray themes
@@ -75,13 +76,15 @@ Custom extensions can be supported via `settings.json`.
 ## 🛠️ Customization
 
 Want to tweak colors or add support for more file types?  
-Just open the `theme.json` file and edit the values, or use the built-in theme editor in VS Code.
+Just open the `theme.json` file and edit the values, use the built-in theme editor in VS Code, 
+and even if you want you can edit it through your `settings.json`.
 
 ---
 
 ## 🛠️ Recommended Settings
 
-To get the best experience with the **Pitch Black** theme, we recommend adding the following settings to your `settings.json` file:
+
+> To ensure the best experience with the **Kids Theme**, we recommend applying the settings below to your `settings.json` — now automated for an even easier and more practical installation!
 
 ```json
 {
@@ -102,7 +105,6 @@ To get the best experience with the **Pitch Black** theme, we recommend adding t
     "*.pf": "default"
   },
   "explorer.confirmDelete": false,
-  "liveServer.settings.donotShowInfoMsg": true,
   "git.autofetch": true,
   "files.autoSave": "afterDelay",
   "files.associations": {
@@ -111,7 +113,6 @@ To get the best experience with the **Pitch Black** theme, we recommend adding t
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "KIDS THEME COLORFUL",
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "runme.flags.disableSaveRestriction": true
 }
 ```
 
@@ -125,4 +126,4 @@ To get the best experience with the **Pitch Black** theme, we recommend adding t
 
 ## 🧠 License
 
-© MIT License — Free to use, modify, and share.
+[© MIT License](https://github.com/MarqueesDev/kids-theme/blob/main/LICENSE.txt) — Free to use, modify, and share.
