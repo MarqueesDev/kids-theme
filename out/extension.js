@@ -47,6 +47,7 @@ exports.deactivate = deactivate;
 const vscode = __importStar(require("vscode"));
 function activate(context) {
     vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não').then((resposta) => __awaiter(this, void 0, void 0, function* () {
+        var _a;
         if (resposta === 'Sim') {
             const config = vscode.workspace.getConfiguration();
             const target = vscode.ConfigurationTarget.Global;
@@ -56,6 +57,7 @@ function activate(context) {
                 if (!extensions.includes('PKief.material-icon-theme')) {
                     yield vscode.commands.executeCommand('workbench.extensions.installExtension', 'PKief.material-icon-theme');
                 }
+                // Atualiza as configurações principais
                 yield config.update('workbench.startupEditor', 'none', target);
                 yield config.update('editor.fontSize', 17, target);
                 yield config.update('editor.lineNumbers', 'on', target);
@@ -70,23 +72,11 @@ function activate(context) {
                     "*.exe": "default",
                     "*.pf": "default"
                 }, target);
-                try {
-                    yield config.update('explorer.confirmDelete', false, target);
-                }
-                catch (error) {
+                // Verifica se a configuração do Live Server existe antes de atualizar
+                if (((_a = config.inspect('liveServer.settings.donotShowInfoMsg')) === null || _a === void 0 ? void 0 : _a.globalValue) !== undefined) {
                     yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
-                    yield config.update('git.autofetch', true, target);
-                    yield config.update('files.autoSave', 'afterDelay', target);
-                    yield config.update('files.associations', {
-                        "*.cfg": "cpp"
-                    }, target);
-                    yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
-                    yield config.update('workbench.iconTheme', 'material-icon-theme', target);
-                    yield config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
-                    yield config.update('runme.flags.disableSaveRestriction', true, target);
-                    console.error("Erro ao aplicar configurações:", error);
                 }
-                yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
+                // Outras configurações adicionais
                 yield config.update('git.autofetch', true, target);
                 yield config.update('files.autoSave', 'afterDelay', target);
                 yield config.update('files.associations', {
