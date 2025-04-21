@@ -5,6 +5,25 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.2.7] — 2025-04-21  
+### 🐛 Correções e Ajustes
+
+- **Correção de travamentos na instalação automática da extensão dependente**:
+  - Ajustado o uso do método `executeCommand` para instalar o tema `material-icon-theme` de forma mais segura e compatível com o carregamento do VS Code.
+  - Tratamento de erros adicionado para evitar que o processo falhe silenciosamente.
+
+- **Melhorias na inicialização da extensão**:
+  - A lógica de verificação e configuração do ícone e tema foi refinada, evitando travamentos em sistemas mais lentos ou com extensões desativadas.
+
+- **Ajustes no comportamento da extensão ao compilar**:
+  - Agora o arquivo `extension.js` é atualizado corretamente sem duplicações, mantendo a estabilidade da pasta `out/`.
+
+- **Estabilidade aprimorada durante a ativação do tema**:
+  - Prevenção contra múltiplas ativações simultâneas.
+  - Verificação de ambiente do VS Code para evitar problemas de performance ao usar `*` como evento de ativação.
+
+---
+
 ## 📦 [0.2.6] — 2025-04-21  
 ### 🎨 Atualizações no Tema
 

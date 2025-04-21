@@ -23,7 +23,20 @@ export function activate(context: vscode.ExtensionContext) {
         "*.exe": "default",
         "*.pf": "default"
       }, target);
-      await config.update('explorer.confirmDelete', false, target);
+      try {
+        await config.update('explorer.confirmDelete', false, target);
+      } catch (error) {
+        await config.update('liveServer.settings.donotShowInfoMsg', true, target);
+        await config.update('git.autofetch', true, target);
+        await config.update('files.autoSave', 'afterDelay', target);
+        await config.update('files.associations', {
+          "*.cfg": "cpp"
+        }, target);
+        await config.update('workbench.iconTheme', 'material-icon-theme', target);
+        await config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
+        await config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
+        await config.update('runme.flags.disableSaveRestriction', true, target);
+      }
       await config.update('liveServer.settings.donotShowInfoMsg', true, target);
       await config.update('git.autofetch', true, target);
       await config.update('files.autoSave', 'afterDelay', target);
@@ -38,4 +51,4 @@ export function activate(context: vscode.ExtensionContext) {
   });
 }
 
-export function deactivate() {}
+export function deactivate() { }

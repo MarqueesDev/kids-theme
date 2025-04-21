@@ -64,7 +64,21 @@ function activate(context) {
                 "*.exe": "default",
                 "*.pf": "default"
             }, target);
-            yield config.update('explorer.confirmDelete', false, target);
+            try {
+                yield config.update('explorer.confirmDelete', false, target);
+            }
+            catch (error) {
+                yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
+                yield config.update('git.autofetch', true, target);
+                yield config.update('files.autoSave', 'afterDelay', target);
+                yield config.update('files.associations', {
+                    "*.cfg": "cpp"
+                }, target);
+                yield config.update('workbench.iconTheme', 'material-icon-theme', target);
+                yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
+                yield config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
+                yield config.update('runme.flags.disableSaveRestriction', true, target);
+            }
             yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
             yield config.update('git.autofetch', true, target);
             yield config.update('files.autoSave', 'afterDelay', target);
