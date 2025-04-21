@@ -19,6 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
           );
         }
 
+        // Atualiza as configurações principais
         await config.update('workbench.startupEditor', 'none', target);
         await config.update('editor.fontSize', 17, target);
         await config.update('editor.lineNumbers', 'on', target);
@@ -33,22 +34,13 @@ export function activate(context: vscode.ExtensionContext) {
           "*.exe": "default",
           "*.pf": "default"
         }, target);
-        try {
-          await config.update('explorer.confirmDelete', false, target);
-        } catch (error) {
+
+        // Verifica se a configuração do Live Server existe antes de atualizar
+        if (config.inspect('liveServer.settings.donotShowInfoMsg')?.globalValue !== undefined) {
           await config.update('liveServer.settings.donotShowInfoMsg', true, target);
-          await config.update('git.autofetch', true, target);
-          await config.update('files.autoSave', 'afterDelay', target);
-          await config.update('files.associations', {
-            "*.cfg": "cpp"
-          }, target);
-          await config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
-          await config.update('workbench.iconTheme', 'material-icon-theme', target);
-          await config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
-          await config.update('runme.flags.disableSaveRestriction', true, target);
-          console.error("Erro ao aplicar configurações:", error);
         }
-        await config.update('liveServer.settings.donotShowInfoMsg', true, target);
+
+        // Outras configurações adicionais
         await config.update('git.autofetch', true, target);
         await config.update('files.autoSave', 'afterDelay', target);
         await config.update('files.associations', {
@@ -58,6 +50,7 @@ export function activate(context: vscode.ExtensionContext) {
         await config.update('workbench.iconTheme', 'material-icon-theme', target);
         await config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
         await config.update('runme.flags.disableSaveRestriction', true, target);
+
       } catch (error) {
         console.error("Erro ao aplicar configurações recomendadas:", error);
       }
