@@ -109,7 +109,7 @@ To get the best experience with the **Pitch Black** theme, we recommend adding t
     "*.cfg": "cpp"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Pitch Black",
+  "workbench.colorTheme": "KIDS THEME COLORFUL",
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "runme.flags.disableSaveRestriction": true
 }

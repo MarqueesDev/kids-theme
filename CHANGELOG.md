@@ -5,6 +5,57 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.2.6] — 2025-04-21  
+### 🎨 Atualizações no Tema
+
+- **Melhoria nas configurações do workspace**, proporcionando uma experiência ainda mais fluida:
+  - `"workbench.startupEditor": "none"` — configura a inicialização do editor para não abrir um editor ao iniciar o VS Code.
+  - `"editor.fontSize": 17` — fonte mais legível.
+  - `"editor.lineNumbers": "on"` — ativa os números das linhas no editor.
+  - `"editor.wordWrap": "on"` — quebras de linha automáticas para melhor visualização de conteúdo.
+  - `"explorer.compactFolders": false` — pastas exibidas de forma mais clara.
+  - `"code-runner.runInTerminal": true` — executa o código no terminal.
+  - `"code-runner.clearPreviousOutput": true` — limpa a saída anterior ao rodar código novamente.
+  - `"code-runner.executorMap": { "python": "cls ; python -u" }` — configuração personalizada para o executor Python.
+  - `"code-runner.ignoreSelection": true` — ignora a seleção ao rodar o código.
+  - `"security.workspace.trust.untrustedFiles": "open"` — abre arquivos não confiáveis sem perguntar.
+  - `"workbench.iconTheme": "material-icon-theme"` — visual mais intuitivo e moderno para ícones.
+  - `"workbench.colorTheme": "KIDS THEME"` — define automaticamente o tema do VS Code para o tema "KIDS THEME".
+
+- **Integração aprimorada com extensões e UX refinada**:
+  - Arquivos `.cfg` agora associados à linguagem C++.
+  - Remoção de confirmações desnecessárias ao excluir arquivos.
+  - Desativação de mensagens informativas do Live Server.
+
+- **Melhoria na execução automática de código**:
+  - Ajustes para otimizar a execução de código com o Code Runner.
+
+- **Ajustes de compatibilidade**:
+  - Agora, o tema é mais consistente e ajustado para uso com o VS Code em diferentes ambientes.
+
+---
+
+## 📦 [0.2.5] — 2025-04-21  
+### 🎨 Atualizações no Tema
+
+- **Adição de configurações recomendadas para workspaces**, proporcionando uma experiência de uso mais fluida com o tema:
+  - `"editor.fontSize": 17` — fonte mais legível.
+  - `"editor.wordWrap": "on"` — quebras de linha automáticas para melhor visualização de conteúdo.
+  - `"explorer.compactFolders": false` — pastas exibidas de forma mais clara.
+  - `"workbench.iconTheme": "material-icon-theme"` — visual mais intuitivo e moderno.
+  - `"workbench.colorTheme": "KIDS THEME"` — define automaticamente o tema do VS Code.
+
+- **Melhor integração com extensões** como Code Runner e Live Server:
+  - Ajustes no executor Python com `cls ; python -u`.
+  - Ocultadas mensagens informativas desnecessárias.
+  - Otimizações de salvamento e execução automática de código.
+
+- **Compatibilidade e UX refinada**:
+  - Arquivos `.cfg` associados à linguagem C++.
+  - Remoção de confirmações e restrições desnecessárias ao salvar/excluir arquivos.
+
+---
+
 ## 📦 [0.2.4] — 2025-04-20
 ### 🎨 Refinamento Final
 - **Ajustes em cores e estilos** de Markdown, visando um visual mais fluido e coeso:

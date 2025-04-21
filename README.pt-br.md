@@ -87,7 +87,7 @@ Basta abrir o arquivo `theme.json` e editar os valores, ou usar o editor de tema
     "*.cfg": "cpp"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Pitch Black",
+  "workbench.colorTheme": "KIDS THEME COLORFUL",
   "terminal.integrated.defaultProfile.windows": "Prompt de Comando",
   "runme.flags.disableSaveRestriction": true
 }
