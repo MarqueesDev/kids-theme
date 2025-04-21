@@ -49,8 +49,6 @@ export function activate(context: vscode.ExtensionContext) {
         await config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
         await config.update('workbench.iconTheme', 'material-icon-theme', target);
         await config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
-        await config.update('runme.flags.disableSaveRestriction', true, target);
-
       } catch (error) {
         console.error("Erro ao aplicar configurações recomendadas:", error);
       }
@@ -58,4 +56,4 @@ export function activate(context: vscode.ExtensionContext) {
   });
 }
 
-export function deactivate() {}
+export function deactivate() { }

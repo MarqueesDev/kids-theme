@@ -85,7 +85,6 @@ function activate(context) {
                 yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
                 yield config.update('workbench.iconTheme', 'material-icon-theme', target);
                 yield config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
-                yield config.update('runme.flags.disableSaveRestriction', true, target);
             }
             catch (error) {
                 console.error("Erro ao aplicar configurações recomendadas:", error);

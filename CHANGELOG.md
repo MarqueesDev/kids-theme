@@ -5,6 +5,20 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.3.0] — 2025-04-21  
+### 🧹 Refatorações e Estabilidade
+
+- **Remoção de configuração inválida**:
+  - A configuração `runme.flags.disableSaveRestriction` foi removida por não ser reconhecida pelo VS Code, evitando erros críticos no momento da aplicação das preferências recomendadas.
+
+- **Melhoria na robustez da extensão**:
+  - Garantido que todas as configurações aplicadas estejam dentro do escopo válido e suportado pelo VS Code, proporcionando uma experiência mais estável e confiável.
+
+- **Preparação para futuras versões**:
+  - Código limpo e otimizado para facilitar a manutenção e inclusão de novas funcionalidades sem conflitos com o schema de configurações.
+
+---
+
 ## 📦 [0.2.9] — 2025-04-21  
 ### 🐛 Correções e Melhorias
 
