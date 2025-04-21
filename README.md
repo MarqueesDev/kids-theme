@@ -7,3 +7,7 @@
 
 - [🇺🇸 English](README.en.md)
 - [🇧🇷 Português (Brasil)](README.pt-br.md)
+
+
+> 📫 Para feedback, sugestões ou bugs, abra uma issue no [repositório oficial](https://github.com/MarqueesDev/kids-theme/issues).
+> 📫 For feedback, suggestions, or bugs, please open an issue in the [official repository](https://github.com/MarqueesDev/kids-theme/issues).

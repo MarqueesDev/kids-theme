@@ -281,5 +281,5 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
-> 📫 Para feedback, sugestões ou bugs, abra uma issue no [repositório oficial](https://github.com/MarqueesDev/kids-theme).
-
+> 📫 Para feedback, sugestões ou bugs, abra uma issue no [repositório oficial](https://github.com/MarqueesDev/kids-theme/issues).
+> 📫 For feedback, suggestions, or bugs, please open an issue in the [official repository](https://github.com/MarqueesDev/kids-theme/issues).
