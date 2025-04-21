@@ -5,6 +5,38 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.2.4] — 2025-04-20
+### 🎨 Refinamento Final
+- **Ajustes em cores e estilos** de Markdown, visando um visual mais fluido e coeso:
+  - `markup.inline.raw.string.markdown`: `#E6B673` — tom caramelo mais suave para dar mais contraste sem perder a legibilidade.
+  - `punctuation.definition.raw.markdown`: `#999999` — cinza neutro para pontuação de bloco de código, proporcionando um visual mais suave.
+  - `meta.image.inline.markdown`: `#C792EA` — lilás com um toque de sofisticação para imagens inline.
+  - `markup.bold`: `#80EEEE` — azul claro para destacar negritos sem chamar atenção excessiva.
+  - `markup.italic`: `#FFFF00` — amarelo suave, mas destacado para textos em itálico.
+  - `markup.bold.italic`: `#FF0000` — vermelho intenso para negrito e itálico, criando contraste e destaque.
+  - `punctuation.definition.list_item.markdown`: `#FF0055` — vermelho forte para itens de lista, facilitando a distinção visual.
+
+### 🧹 Ajustes Finais
+- **Padronização** e revisão final da paleta de cores para garantir consistência visual no tema.
+
+---
+
+## 📦 [0.2.3] — 2025-04-20
+### 🎨 Ajustes Visuais
+- **Refinamento das cores** para melhor harmonia no tema e distinção de elementos Markdown:
+  - `markup.inline.raw.string.markdown`: `#E6B673` — tom caramelo suave para o conteúdo inline.
+  - `punctuation.definition.raw.markdown`: `#999999` — cinza claro discreto para a pontuação de bloco de código.
+  - `meta.image.inline.markdown`: `#C792EA` — lilás elegante para imagens inline.
+  - `markup.bold`: `#80EEEE` — azul claro vibrante para negrito.
+  - `markup.italic`: `#FFFF00` — amarelo claro para itálico.
+  - `markup.bold.italic`: `#FF0000` — vermelho forte para negrito + itálico.
+  - `punctuation.definition.list_item.markdown`: `#FF0055` — vermelho marcante para marcadores de lista.
+
+### 🧼 Limpeza
+- **Organização e remoção** de escopos redundantes no arquivo `tokenColors` para melhorar a manutenção.
+
+---
+
 ## 📦 [0.2.2] — 2025-04-20
 ### 🎨 Ajustes Visuais
 - **Cores refinadas** para elementos de Markdown visando melhor contraste e coerência visual:
