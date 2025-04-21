@@ -5,6 +5,26 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.2.8] — 2025-04-21  
+### 🐛 Correções e Melhorias
+
+- **Correção de travamentos durante a instalação da extensão dependente**:
+  - Ajuste no processo de instalação do tema `material-icon-theme`, garantindo maior compatibilidade e desempenho ao verificar se a extensão já está instalada.
+  - Utilização do método `vscode.commands.executeCommand` para instalar a extensão de ícones de maneira segura e eficaz.
+
+- **Refinamento nas configurações do workspace**:
+  - As configurações de editor e terminal foram ajustadas para uma experiência mais fluida e otimizada.
+  - Melhorias no comportamento do VS Code ao configurar as preferências, como fonte, quebra de linha e visualização de ícones.
+
+- **Ajustes em comportamentos de extensões**:
+  - Implementação de controles para garantir que a extensão `material-icon-theme` seja instalada apenas quando necessário.
+  - Configuração do ícone e tema do VS Code de forma automática ao aplicar as configurações recomendadas.
+
+- **Melhorias no fluxo de trabalho do usuário**:
+  - Apliacação das configurações recomendadas do tema de forma interativa e sem erros.
+
+---
+
 ## 📦 [0.2.7] — 2025-04-21  
 ### 🐛 Correções e Ajustes
 

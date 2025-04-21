@@ -50,45 +50,56 @@ function activate(context) {
         if (resposta === 'Sim') {
             const config = vscode.workspace.getConfiguration();
             const target = vscode.ConfigurationTarget.Global;
-            yield config.update('workbench.startupEditor', 'none', target);
-            yield config.update('editor.fontSize', 17, target);
-            yield config.update('editor.lineNumbers', 'on', target);
-            yield config.update('editor.wordWrap', 'on', target);
-            yield config.update('explorer.compactFolders', false, target);
-            yield config.update('code-runner.runInTerminal', true, target);
-            yield config.update('code-runner.clearPreviousOutput', true, target);
-            yield config.update('code-runner.executorMap', { "python": "cls ; python -u" }, target);
-            yield config.update('code-runner.ignoreSelection', true, target);
-            yield config.update('security.workspace.trust.untrustedFiles', 'open', target);
-            yield config.update('workbench.editorAssociations', {
-                "*.exe": "default",
-                "*.pf": "default"
-            }, target);
             try {
-                yield config.update('explorer.confirmDelete', false, target);
-            }
-            catch (error) {
+                // Instala o tema de ícones se necessário
+                const extensions = vscode.extensions.all.map(ext => ext.id);
+                if (!extensions.includes('PKief.material-icon-theme')) {
+                    yield vscode.commands.executeCommand('workbench.extensions.installExtension', 'PKief.material-icon-theme');
+                }
+                yield config.update('workbench.startupEditor', 'none', target);
+                yield config.update('editor.fontSize', 17, target);
+                yield config.update('editor.lineNumbers', 'on', target);
+                yield config.update('editor.wordWrap', 'on', target);
+                yield config.update('explorer.compactFolders', false, target);
+                yield config.update('code-runner.runInTerminal', true, target);
+                yield config.update('code-runner.clearPreviousOutput', true, target);
+                yield config.update('code-runner.executorMap', { "python": "cls ; python -u" }, target);
+                yield config.update('code-runner.ignoreSelection', true, target);
+                yield config.update('security.workspace.trust.untrustedFiles', 'open', target);
+                yield config.update('workbench.editorAssociations', {
+                    "*.exe": "default",
+                    "*.pf": "default"
+                }, target);
+                try {
+                    yield config.update('explorer.confirmDelete', false, target);
+                }
+                catch (error) {
+                    yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
+                    yield config.update('git.autofetch', true, target);
+                    yield config.update('files.autoSave', 'afterDelay', target);
+                    yield config.update('files.associations', {
+                        "*.cfg": "cpp"
+                    }, target);
+                    yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
+                    yield config.update('workbench.iconTheme', 'material-icon-theme', target);
+                    yield config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
+                    yield config.update('runme.flags.disableSaveRestriction', true, target);
+                    console.error("Erro ao aplicar configurações:", error);
+                }
                 yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
                 yield config.update('git.autofetch', true, target);
                 yield config.update('files.autoSave', 'afterDelay', target);
                 yield config.update('files.associations', {
                     "*.cfg": "cpp"
                 }, target);
-                yield config.update('workbench.iconTheme', 'material-icon-theme', target);
                 yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
+                yield config.update('workbench.iconTheme', 'material-icon-theme', target);
                 yield config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
                 yield config.update('runme.flags.disableSaveRestriction', true, target);
             }
-            yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
-            yield config.update('git.autofetch', true, target);
-            yield config.update('files.autoSave', 'afterDelay', target);
-            yield config.update('files.associations', {
-                "*.cfg": "cpp"
-            }, target);
-            yield config.update('workbench.iconTheme', 'material-icon-theme', target);
-            yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
-            yield config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
-            yield config.update('runme.flags.disableSaveRestriction', true, target);
+            catch (error) {
+                console.error("Erro ao aplicar configurações recomendadas:", error);
+            }
         }
     }));
 }
