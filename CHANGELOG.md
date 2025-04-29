@@ -5,6 +5,25 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.3.1] — 2025-04-29  
+### 🛠️ Atualizações e Melhorias
+
+- **Atualização das configurações de tema e extensões**:
+  - Agora, a notificação de configuração recomendada da extensão só é exibida se o tema ativo for `kids-theme` ou `kids-theme-colorful`, e se a notificação não tiver sido exibida anteriormente.
+  - Garantido que a configuração do terminal integrado seja alterada para o **PowerShell** por padrão nas configurações recomendadas.
+
+- **Melhoria no processo de configuração**:
+  - A extensão agora verifica e instala automaticamente o tema de ícones `material-icon-theme` caso não esteja presente.
+  - As configurações recomendadas foram ajustadas para garantir uma experiência mais estável e personalizada, incluindo ajustes para o editor, terminal e a execução de código.
+
+- **Refatoração de código**:
+  - Código otimizado e limpo para uma manutenção mais fácil e integração de novas funcionalidades sem impactos negativos no funcionamento da extensão.
+
+- **Atualização e reformulação dos README**:
+  - As informações dos arquivos README foram reformuladas para melhor explicação sobre as funcionalidades e como utilizar a extensão de forma eficiente.
+
+---
+
 ## 📦 [0.3.0] — 2025-04-21  
 ### 🧹 Refatorações e Estabilidade
 

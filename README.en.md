@@ -112,7 +112,7 @@ and even if you want you can edit it through your `settings.json`.
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "KIDS THEME COLORFUL",
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.defaultProfile.windows": "Powershell",
 }
 ```
 
