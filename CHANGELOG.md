@@ -5,6 +5,18 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.3.3] — 2025-04-29  
+### 🧹 Refatorações e Correções
+
+- **Ajustes na ativação da extensão**:
+  - Corrigida a forma de ativação da extensão, garantindo que a notificação apareça corretamente ao instalar ou atualizar o tema.
+  
+- **Melhoria no log de desenvolvimento**:
+  - Adicionada a linha de log para verificar o tema atual em uso, facilitando a depuração da ativação da extensão.
+
+
+---
+
 ## 📦 [0.3.2] — 2025-04-29  
 ### 🧹 Refatorações e Correções
 
