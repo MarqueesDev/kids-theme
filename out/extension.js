@@ -46,6 +46,8 @@ exports.activate = activate;
 exports.deactivate = deactivate;
 const vscode = __importStar(require("vscode"));
 function activate(context) {
+    const theme = vscode.workspace.getConfiguration('workbench').get('colorTheme');
+    console.log(`🎨 Tema atual: ${theme}`);
     vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não').then((resposta) => __awaiter(this, void 0, void 0, function* () {
         var _a;
         if (resposta === 'Sim') {

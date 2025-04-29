@@ -1,6 +1,8 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
+  const theme = vscode.workspace.getConfiguration('workbench').get('colorTheme');
+  console.log(`🎨 Tema atual: ${theme}`);
   vscode.window.showInformationMessage(
     'Deseja aplicar as configurações recomendadas do tema?',
     'Sim', 'Agora não'
