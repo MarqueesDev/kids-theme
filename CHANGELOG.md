@@ -5,6 +5,14 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.3.4] — 2025-04-29  
+### 🧹 Refatorações e Ajustes
+
+- **Ajuste nas condições de exibição da notificação**:
+  - Garantido que a notificação de configurações seja exibida corretamente nas versões de instalação e atualização.
+
+---
+
 ## 📦 [0.3.3] — 2025-04-29  
 ### 🧹 Refatorações e Correções
 
