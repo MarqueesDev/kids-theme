@@ -6,10 +6,13 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 ---
 
 ## 📦 [0.3.4] — 2025-04-29  
-### 🧹 Refatorações e Ajustes
+### 🧹 Refatorações e Correções
 
-- **Ajuste nas condições de exibição da notificação**:
-  - Garantido que a notificação de configurações seja exibida corretamente nas versões de instalação e atualização.
+- **Correção na verificação do tema**:
+  - Adicionada verificação de tipo para garantir que o tema atual seja uma string antes de aplicar as configurações, evitando erro de tipo.
+
+- **Correção na lógica da notificação**:
+  - Ajustada a lógica para garantir que a notificação seja mostrada apenas se o tema for válido e a configuração ainda não tiver sido aplicada.
 
 ---
 
