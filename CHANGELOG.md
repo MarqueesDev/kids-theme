@@ -5,6 +5,15 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## [0.3.5] - 2025-04-29
+
+### Alterações:
+- **Fixed** - Corrigida a exibição da notificação de configurações recomendadas para o tema.
+- **Updated** - A lógica de exibição da notificação agora garante que ela seja exibida apenas uma vez após a instalação ou atualização do tema.
+- **Refactored** - Melhorias na organização do código e remoção de duplicações na execução da notificação.
+
+---
+
 ## 📦 [0.3.4] — 2025-04-29  
 ### 🧹 Refatorações e Correções
 

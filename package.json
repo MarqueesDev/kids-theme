@@ -2,7 +2,7 @@
   "name": "kids-theme",
   "displayName": "KIDS THEME",
   "description": "🎨 A pitch-black theme, designed to follow the color standards of VS Code itself — perfect for those who find VS Code themes too light. Also supports .cfg files!",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "author": {
     "name": "Alan Marques",
     "email": "dev.alanmarques@gmail.com",
@@ -15,10 +15,29 @@
     "url": "https://github.com/MarqueesDev/kids-theme"
   },
   "main": "./out/extension.js",
-  "activationEvents": [
-    "onColorTheme:kids-theme-colorful",
-    "onColorTheme:kids-theme-color-theme"
-  ],
+"activationEvents": [
+    "workspaceContains:**/*.js",
+    "workspaceContains:**/*.ts",
+    "workspaceContains:**/*.json",
+    "workspaceContains:**/*.yaml",
+    "workspaceContains:**/*.yml",
+    "workspaceContains:**/*.xml",
+    "workspaceContains:**/*.html",
+    "workspaceContains:**/*.css",
+    "workspaceContains:**/*.sql",
+    "workspaceContains:**/*.cpp",
+    "workspaceContains:**/*.py",
+    "workspaceContains:**/*.sh",
+    "workspaceContains:**/*.bash",
+    "workspaceContains:**/*.zsh",
+    "workspaceContains:**/*.cfg",
+    "workspaceContains:**/*.ini",
+    "workspaceContains:**/*.properties",
+    "workspaceContains:**/*.env",
+    "workspaceContains:**/*.markdown",
+    "workspaceContains:**/*.php",
+    "workspaceContains:**/*.blade.php"
+],
   "icon": "./AlienSpeak.gif",
   "engines": {
     "vscode": "^1.99.0"
