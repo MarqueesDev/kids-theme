@@ -5,6 +5,20 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.3.2] — 2025-04-29  
+### 🧹 Refatorações e Correções
+
+- **Correção na formatação do README**:
+  - Quebra de linha corrigida para as seções de feedback no README, garantindo que as informações fiquem corretamente formatadas.
+
+- **Aprimoramento na usabilidade**:
+  - Melhoria na clareza das instruções de feedback, garantindo uma melhor experiência para os usuários ao buscar suporte.
+
+- **Atualização de conteúdo**:
+  - Novas informações adicionadas ao README para orientar melhor os usuários sobre o uso e suporte da extensão.
+
+---
+
 ## 📦 [0.3.1] — 2025-04-29  
 ### 🛠️ Atualizações e Melhorias
 
