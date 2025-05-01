@@ -16,8 +16,7 @@
   },
   "main": "./out/extension.js",
   "activationEvents": [
-    "onColorTheme:kids-theme-colorful",
-    "onColorTheme:kids-theme-color-theme"
+    "*"
   ],
   "icon": "./AlienSpeak.gif",
   "engines": {

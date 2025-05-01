@@ -46,31 +46,19 @@ exports.activate = activate;
 exports.deactivate = deactivate;
 const vscode = __importStar(require("vscode"));
 function activate(context) {
-    // Verifica se a notificação já foi mostrada antes
-    const hasShown = context.globalState.get('welcomeShown');
-    // Verifica o tema atual e garante que é uma string
-    const currentTheme = vscode.workspace.getConfiguration('workbench').get('colorTheme');
-    if (typeof currentTheme !== 'string') {
-        console.error("Tema atual não é uma string:", currentTheme);
-        return; // Se não for uma string, não continua
-    }
-    console.log(`🎨 Tema atual: ${currentTheme}`); // Verifica se está retornando o tema atual corretamente
-    // Lista de temas válidos para a notificação
-    const validThemes = ['kids-theme-colorful', 'kids-theme-color-theme'];
-    // Se o tema for um dos válidos e a notificação ainda não foi mostrada
-    if (!hasShown && validThemes.includes(currentTheme)) {
-        vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não').then((resposta) => __awaiter(this, void 0, void 0, function* () {
-            var _a;
+    return __awaiter(this, void 0, void 0, function* () {
+        var _a;
+        const hasShown = yield context.globalState.get('welcomeShown');
+        if (!hasShown) {
+            const resposta = yield vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não');
             if (resposta === 'Sim') {
                 const config = vscode.workspace.getConfiguration();
                 const target = vscode.ConfigurationTarget.Global;
                 try {
-                    // Instala o tema de ícones se necessário
                     const extensions = vscode.extensions.all.map(ext => ext.id);
                     if (!extensions.includes('PKief.material-icon-theme')) {
                         yield vscode.commands.executeCommand('workbench.extensions.installExtension', 'PKief.material-icon-theme');
                     }
-                    // Atualiza as configurações principais
                     yield config.update('workbench.startupEditor', 'none', target);
                     yield config.update('editor.fontSize', 17, target);
                     yield config.update('editor.lineNumbers', 'on', target);
@@ -85,11 +73,9 @@ function activate(context) {
                         "*.exe": "default",
                         "*.pf": "default"
                     }, target);
-                    // Verifica se a configuração do Live Server existe antes de atualizar
                     if (((_a = config.inspect('liveServer.settings.donotShowInfoMsg')) === null || _a === void 0 ? void 0 : _a.globalValue) !== undefined) {
                         yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
                     }
-                    // Outras configurações adicionais
                     yield config.update('git.autofetch', true, target);
                     yield config.update('files.autoSave', 'afterDelay', target);
                     yield config.update('files.associations', {
@@ -97,15 +83,14 @@ function activate(context) {
                     }, target);
                     yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
                     yield config.update('workbench.iconTheme', 'material-icon-theme', target);
-                    yield config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
-                    // Marcar a notificação como mostrada
-                    context.globalState.update('welcomeShown', true);
+                    yield config.update('terminal.integrated.defaultProfile.windows', 'PowerShell', target);
+                    yield context.globalState.update('welcomeShown', undefined);
                 }
                 catch (error) {
                     console.error("Erro ao aplicar configurações recomendadas:", error);
                 }
             }
-        }));
-    }
+        }
+    });
 }
 function deactivate() { }
