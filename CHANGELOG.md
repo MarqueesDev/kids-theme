@@ -5,6 +5,16 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## [0.3.8] - 2025-04-30
+
+### Added
+- Implementada a exibição de notificação de configurações recomendadas na ativação da extensão.
+
+### Fixed
+- Correção na exibição da notificação de configurações recomendadas, agora exibida apenas uma vez após a instalação ou atualização da extensão.
+
+---
+
 ## 📦 Versão 0.3.6 ||| 0.3.7 — Atualizações e Melhorias
 
 - 📌 Corrigido o uso do `await` na atualização de `welcomeShown` para garantir que a notificação de boas-vindas só apareça uma vez

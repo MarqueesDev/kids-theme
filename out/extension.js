@@ -48,7 +48,7 @@ const vscode = __importStar(require("vscode"));
 function activate(context) {
     return __awaiter(this, void 0, void 0, function* () {
         var _a;
-        const hasShown = context.globalState.get('welcomeShown');
+        const hasShown = yield context.globalState.get('welcomeShown');
         if (!hasShown) {
             const resposta = yield vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não');
             if (resposta === 'Sim') {

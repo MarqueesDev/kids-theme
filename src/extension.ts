@@ -1,8 +1,7 @@
 import * as vscode from 'vscode';
 
 export async function activate(context: vscode.ExtensionContext) {
-    const hasShown = context.globalState.get('welcomeShown');
-
+    const hasShown = await context.globalState.get<boolean>('welcomeShown');
     if (!hasShown) {
         const resposta = await vscode.window.showInformationMessage(
             'Deseja aplicar as configurações recomendadas do tema?',
