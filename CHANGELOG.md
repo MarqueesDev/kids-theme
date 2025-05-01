@@ -5,39 +5,11 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
-## [0.3.9] - 2025-05-01
-### Alterado
-- Ajustado o método de verificação do estado `welcomeShown` para garantir que a notificação de configurações recomendadas seja exibida corretamente.
+## 📦 [0.4.0] — 2025-04-29  
+### 🧹 Refatorações e Correções
 
-### Correção
-- Corrigido o fluxo de execução para evitar que a notificação seja exibida se as configurações já tiverem sido aplicadas anteriormente.
-
----
-
-## [0.3.8] - 2025-04-30
-
-### Added
-- Implementada a exibição de notificação de configurações recomendadas na ativação da extensão.
-
-### Fixed
-- Correção na exibição da notificação de configurações recomendadas, agora exibida apenas uma vez após a instalação ou atualização da extensão.
-
----
-
-## 📦 Versão 0.3.6 ||| 0.3.7 — Atualizações e Melhorias
-
-- 📌 Corrigido o uso do `await` na atualização de `welcomeShown` para garantir que a notificação de boas-vindas só apareça uma vez
-- 📌 Estrutura assíncrona do `activate()` refatorada para uso de `async/await` completo
-- 🔁 Atualizado o `package.json` para incluir `onDidChangeConfiguration` nos `activationEvents`
-
----
-
-## [0.3.5] - 2025-04-29
-
-### Alterações:
-- **Fixed** - Corrigida a exibição da notificação de configurações recomendadas para o tema.
-- **Updated** - A lógica de exibição da notificação agora garante que ela seja exibida apenas uma vez após a instalação ou atualização do tema.
-- **Refactored** - Melhorias na organização do código e remoção de duplicações na execução da notificação.
+- **Retornando a versão**:
+  - Versão foi retornada para uma anterior por problemas com versões mais novas.
 
 ---
 
