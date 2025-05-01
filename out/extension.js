@@ -84,7 +84,7 @@ function activate(context) {
                     yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
                     yield config.update('workbench.iconTheme', 'material-icon-theme', target);
                     yield config.update('terminal.integrated.defaultProfile.windows', 'PowerShell', target);
-                    yield context.globalState.update('welcomeShown', true);
+                    yield context.globalState.update('welcomeShown', undefined);
                 }
                 catch (error) {
                     console.error("Erro ao aplicar configurações recomendadas:", error);

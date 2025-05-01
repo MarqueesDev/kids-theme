@@ -5,6 +5,15 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## [0.3.9] - 2025-05-01
+### Alterado
+- Ajustado o método de verificação do estado `welcomeShown` para garantir que a notificação de configurações recomendadas seja exibida corretamente.
+
+### Correção
+- Corrigido o fluxo de execução para evitar que a notificação seja exibida se as configurações já tiverem sido aplicadas anteriormente.
+
+---
+
 ## [0.3.8] - 2025-04-30
 
 ### Added

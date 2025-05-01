@@ -50,7 +50,7 @@ export async function activate(context: vscode.ExtensionContext) {
                 await config.update('workbench.iconTheme', 'material-icon-theme', target);
                 await config.update('terminal.integrated.defaultProfile.windows', 'PowerShell', target);
 
-                await context.globalState.update('welcomeShown', true);
+                await context.globalState.update('welcomeShown', undefined);
             } catch (error) {
                 console.error("Erro ao aplicar configurações recomendadas:", error);
             }
