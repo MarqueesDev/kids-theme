@@ -5,6 +5,19 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+📦 [0.4.2] — Correções e melhorias na extensão
+
+• Updated - O *activation event* foi alterado para `onLanguage` para uma ativação mais eficiente.
+• Fixed - Correção no código da extensão para garantir a verificação correta das extensões instaladas.
+• Fixed - Ajustes nas configurações do editor, incluindo `workbench.startupEditor`, `editor.fontSize` e outras.
+• Refactored - O código foi reorganizado para melhorar a estrutura e clareza na aplicação das configurações.
+• Added - Tema de ícones `material-icon-theme` instalado automaticamente, se necessário.
+• Updated - A configuração do terminal foi alterada para `PowerShell` no Windows.
+• Testing - A solução está sendo testada para garantir que as configurações recomendadas funcionem corretamente.
+• Fixed - Correção na lógica de aplicação de configurações no VS Code após a instalação da extensão.
+
+---
+
 📦 [0.4.1] — Atualização de eventos de ativação e melhorias
 
 • Updated - O *activation event* foi alterado para `onLanguage` para uma ativação mais eficiente.
@@ -313,47 +326,6 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ### 🔧 Corrigido
 - Ajustes finais em comentários de arquivos `.json` usando o escopo `meta.structure.dictionary.json.comments`.
-
----
-
-## 📦 [0.1.9] — 2025-04-20
-### 🔧 Corrigido
-- Ajustes de cores para arquivos `.json` e extensões relacionadas (JSONC).
-- Comentários em JSON agora são corretamente destacados usando o escopo `meta.structure.dictionary.json.comments`.
-
----
-
-## 📦 [0.1.8] — 2025-04-19
-### 🎨 Adicionado
-- Estilização para `invalid.illegal` e `invalid.deprecated` para melhor contraste.
-- Suporte ao escopo `constant.other.placeholder` (útil em snippets e templates).
-
----
-
-## 📦 [0.1.7] — 2025-04-19
-### ⚙️ Atualizado
-- Melhor contraste de texto em seleções (`selection.background` e `selection.foreground`).
-- Refinamento na paleta base para manter a estética "pitch black" mais uniforme.
-
----
-
-## 📦 [0.1.6] — 2025-04-18
-### 🧪 Adicionado
-- Paleta de cores personalizada adicionada no `workbench.colorCustomizations`.
-
----
-
-## 📦 [0.1.5] — 2025-04-18
-### 💅 Melhorado
-- Estilo de strings e funções atualizado para leitura confortável em ambientes escuros.
-
----
-
-## 🚀 [0.1.0] — 2025-04-17
-### ✨ Lançamento Inicial
-- Primeira versão pública do tema **Kids-Theme**.
-- Foco total em um visual escuro puro com contrastes suaves e sem saturação agressiva.
-- Suporte básico a: JS, TS, JSON, HTML, CSS, Markdown e arquivos de configuração.
 
 ---
 

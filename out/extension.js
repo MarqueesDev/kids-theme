@@ -51,15 +51,16 @@ function activate(context) {
     // Se a notificação ainda não foi mostrada, exibe a mensagem
     if (!hasShown) {
         vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não').then((resposta) => __awaiter(this, void 0, void 0, function* () {
-            var _a;
             if (resposta === 'Sim') {
                 const config = vscode.workspace.getConfiguration();
                 const target = vscode.ConfigurationTarget.Global;
                 try {
+                    // Instala o tema de ícones se necessário
                     const extensions = vscode.extensions.all.map(ext => ext.id);
                     if (!extensions.includes('PKief.material-icon-theme')) {
                         yield vscode.commands.executeCommand('workbench.extensions.installExtension', 'PKief.material-icon-theme');
                     }
+                    // Atualiza as configurações principais
                     yield config.update('workbench.startupEditor', 'none', target);
                     yield config.update('editor.fontSize', 17, target);
                     yield config.update('editor.lineNumbers', 'on', target);
@@ -74,9 +75,12 @@ function activate(context) {
                         "*.exe": "default",
                         "*.pf": "default"
                     }, target);
-                    if (((_a = config.inspect('liveServer.settings.donotShowInfoMsg')) === null || _a === void 0 ? void 0 : _a.globalValue) !== undefined) {
+                    // Verifica se a configuração do Live Server existe antes de atualizar
+                    const liveServerConfig = config.inspect('liveServer.settings.donotShowInfoMsg');
+                    if ((liveServerConfig === null || liveServerConfig === void 0 ? void 0 : liveServerConfig.globalValue) !== undefined) {
                         yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
                     }
+                    // Outras configurações adicionais
                     yield config.update('git.autofetch', true, target);
                     yield config.update('files.autoSave', 'afterDelay', target);
                     yield config.update('files.associations', {
@@ -85,13 +89,14 @@ function activate(context) {
                     yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
                     yield config.update('workbench.iconTheme', 'material-icon-theme', target);
                     yield config.update('terminal.integrated.defaultProfile.windows', 'PowerShell', target);
-                    yield context.globalState.update('welcomeShown', undefined);
+                    // Atualiza o estado global para indicar que a notificação foi mostrada
+                    yield context.globalState.update('welcomeShown', true); // Agora a notificação foi mostrada
                 }
                 catch (error) {
                     console.error("Erro ao aplicar configurações recomendadas:", error);
                 }
             }
-        }
-    });
+        }));
+    }
 }
 function deactivate() { }

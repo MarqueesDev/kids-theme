@@ -42,7 +42,8 @@ export function activate(context: vscode.ExtensionContext) {
                     }, target);
 
                     // Verifica se a configuração do Live Server existe antes de atualizar
-                    if (config.inspect('liveServer.settings.donotShowInfoMsg')?.globalValue !== undefined) {
+                    const liveServerConfig = config.inspect('liveServer.settings.donotShowInfoMsg');
+                    if (liveServerConfig?.globalValue !== undefined) {
                         await config.update('liveServer.settings.donotShowInfoMsg', true, target);
                     }
 
@@ -55,11 +56,14 @@ export function activate(context: vscode.ExtensionContext) {
                     await config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
                     await config.update('workbench.iconTheme', 'material-icon-theme', target);
                     await config.update('terminal.integrated.defaultProfile.windows', 'PowerShell', target);
-                    await context.globalState.update('welcomeShown', undefined);
-            } catch (error) {
-                console.error("Erro ao aplicar configurações recomendadas:", error);
+                    
+                    // Atualiza o estado global para indicar que a notificação foi mostrada
+                    await context.globalState.update('welcomeShown', true); // Agora a notificação foi mostrada
+                } catch (error) {
+                    console.error("Erro ao aplicar configurações recomendadas:", error);
+                }
             }
-        }
+        });
     }
 }
 
