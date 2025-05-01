@@ -5,6 +5,14 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 [0.4.0] — 2025-04-29  
+### 🧹 Refatorações e Correções
+
+- **Retornando a versão**:
+  - Versão foi retornada para uma anterior por problemas com versões mais novas.
+
+---
+
 ## 📦 [0.3.4] — 2025-04-29  
 ### 🧹 Refatorações e Correções
 
