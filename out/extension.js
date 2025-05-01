@@ -46,11 +46,12 @@ exports.activate = activate;
 exports.deactivate = deactivate;
 const vscode = __importStar(require("vscode"));
 function activate(context) {
-    return __awaiter(this, void 0, void 0, function* () {
-        var _a;
-        const hasShown = yield context.globalState.get('welcomeShown');
-        if (!hasShown) {
-            const resposta = yield vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não');
+    // Verifica se a notificação já foi mostrada antes
+    const hasShown = context.globalState.get('welcomeShown');
+    // Se a notificação ainda não foi mostrada, exibe a mensagem
+    if (!hasShown) {
+        vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não').then((resposta) => __awaiter(this, void 0, void 0, function* () {
+            var _a;
             if (resposta === 'Sim') {
                 const config = vscode.workspace.getConfiguration();
                 const target = vscode.ConfigurationTarget.Global;
