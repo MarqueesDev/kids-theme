@@ -5,6 +5,18 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+📦 [0.4.1] — Atualização de eventos de ativação e melhorias
+
+• Updated - O *activation event* foi alterado para `onLanguage` para uma ativação mais eficiente.
+• Fixed - Correção no código relacionado ao evento de ativação.
+• Testing - A solução está sendo testada para garantir a funcionalidade correta.
+• Refactored - Código reorganizado para melhorar a estrutura e clareza.
+• Updated - README atualizado para refletir as novas alterações e explicações de configuração.
+• Added - Testes adicionais para verificar a integração com o novo evento de ativação.
+• Fixed - Corrigido o comportamento do evento de ativação em diferentes linguagens.
+
+---
+
 ## 📦 [0.4.0] — 2025-04-29  
 ### 🧹 Refatorações e Correções
 

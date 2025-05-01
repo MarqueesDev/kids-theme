@@ -48,17 +48,8 @@ const vscode = __importStar(require("vscode"));
 function activate(context) {
     // Verifica se a notificação já foi mostrada antes
     const hasShown = context.globalState.get('welcomeShown');
-    // Verifica o tema atual e garante que é uma string
-    const currentTheme = vscode.workspace.getConfiguration('workbench').get('colorTheme');
-    if (typeof currentTheme !== 'string') {
-        console.error("Tema atual não é uma string:", currentTheme);
-        return; // Se não for uma string, não continua
-    }
-    console.log(`🎨 Tema atual: ${currentTheme}`); // Verifica se está retornando o tema atual corretamente
-    // Lista de temas válidos para a notificação
-    const validThemes = ['kids-theme-colorful', 'kids-theme-color-theme'];
-    // Se o tema for um dos válidos e a notificação ainda não foi mostrada
-    if (!hasShown && validThemes.includes(currentTheme)) {
+    // Se a notificação ainda não foi mostrada, exibe a mensagem
+    if (!hasShown) {
         vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não').then((resposta) => __awaiter(this, void 0, void 0, function* () {
             var _a;
             if (resposta === 'Sim') {
