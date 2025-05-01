@@ -54,15 +54,12 @@ export function activate(context: vscode.ExtensionContext) {
                     }, target);
                     await config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
                     await config.update('workbench.iconTheme', 'material-icon-theme', target);
-                    await config.update('terminal.integrated.defaultProfile.windows', 'Command Prompt', target);
-
-                    // Marcar a notificação como mostrada
-                    context.globalState.update('welcomeShown', true);
-                } catch (error) {
-                    console.error("Erro ao aplicar configurações recomendadas:", error);
-                }
+                    await config.update('terminal.integrated.defaultProfile.windows', 'PowerShell', target);
+                    await context.globalState.update('welcomeShown', undefined);
+            } catch (error) {
+                console.error("Erro ao aplicar configurações recomendadas:", error);
             }
-        });
+        }
     }
 }
 
