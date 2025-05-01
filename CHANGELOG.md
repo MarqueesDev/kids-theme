@@ -5,6 +5,14 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+## 📦 Versão 0.3.6 ||| 0.3.7 — Atualizações e Melhorias
+
+- 📌 Corrigido o uso do `await` na atualização de `welcomeShown` para garantir que a notificação de boas-vindas só apareça uma vez
+- 📌 Estrutura assíncrona do `activate()` refatorada para uso de `async/await` completo
+- 🔁 Atualizado o `package.json` para incluir `onDidChangeConfiguration` nos `activationEvents`
+
+---
+
 ## [0.3.5] - 2025-04-29
 
 ### Alterações:
