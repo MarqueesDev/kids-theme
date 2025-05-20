@@ -5,6 +5,16 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+📦 [0.4.3] — Detecção de versão para aplicar configurações
+
+• Added - Verificação automática da versão da extensão para exibir a notificação de configurações apenas em instalação ou atualização.
+• Updated - Ajustes no tsconfig.json para permitir importação do package.json.
+• Fixed - Prevenção da repetição da notificação a cada reinicialização do VS Code.
+• Refactored - Lógica anterior substituída por controle baseado em kidsThemeVersion.
+• Testing - A funcionalidade está sendo testada para garantir consistência nas ativações corretas.
+
+---
+
 📦 [0.4.2] — Correções e melhorias na extensão
 
 • Updated - O *activation event* foi alterado para `onLanguage` para uma ativação mais eficiente.

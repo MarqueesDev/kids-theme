@@ -43,24 +43,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = activate;
-exports.deactivate = deactivate;
 const vscode = __importStar(require("vscode"));
+const package_json_1 = require("../package.json");
 function activate(context) {
-    // Verifica se a notificação já foi mostrada antes
-    const hasShown = context.globalState.get('welcomeShown');
-    // Se a notificação ainda não foi mostrada, exibe a mensagem
-    if (!hasShown) {
+    const currentVersion = package_json_1.version || '0.0.0';
+    const previousVersion = context.globalState.get('kidsThemeVersion');
+    if (currentVersion !== previousVersion) {
         vscode.window.showInformationMessage('Deseja aplicar as configurações recomendadas do tema?', 'Sim', 'Agora não').then((resposta) => __awaiter(this, void 0, void 0, function* () {
             if (resposta === 'Sim') {
                 const config = vscode.workspace.getConfiguration();
                 const target = vscode.ConfigurationTarget.Global;
                 try {
-                    // Instala o tema de ícones se necessário
                     const extensions = vscode.extensions.all.map(ext => ext.id);
                     if (!extensions.includes('PKief.material-icon-theme')) {
                         yield vscode.commands.executeCommand('workbench.extensions.installExtension', 'PKief.material-icon-theme');
                     }
-                    // Atualiza as configurações principais
                     yield config.update('workbench.startupEditor', 'none', target);
                     yield config.update('editor.fontSize', 17, target);
                     yield config.update('editor.lineNumbers', 'on', target);
@@ -75,12 +72,10 @@ function activate(context) {
                         "*.exe": "default",
                         "*.pf": "default"
                     }, target);
-                    // Verifica se a configuração do Live Server existe antes de atualizar
                     const liveServerConfig = config.inspect('liveServer.settings.donotShowInfoMsg');
                     if ((liveServerConfig === null || liveServerConfig === void 0 ? void 0 : liveServerConfig.globalValue) !== undefined) {
                         yield config.update('liveServer.settings.donotShowInfoMsg', true, target);
                     }
-                    // Outras configurações adicionais
                     yield config.update('git.autofetch', true, target);
                     yield config.update('files.autoSave', 'afterDelay', target);
                     yield config.update('files.associations', {
@@ -89,14 +84,12 @@ function activate(context) {
                     yield config.update('workbench.colorTheme', 'KIDS THEME COLORFUL', target);
                     yield config.update('workbench.iconTheme', 'material-icon-theme', target);
                     yield config.update('terminal.integrated.defaultProfile.windows', 'PowerShell', target);
-                    // Atualiza o estado global para indicar que a notificação foi mostrada
-                    yield context.globalState.update('welcomeShown', true); // Agora a notificação foi mostrada
                 }
                 catch (error) {
                     console.error("Erro ao aplicar configurações recomendadas:", error);
                 }
             }
         }));
+        context.globalState.update('kidsThemeVersion', currentVersion);
     }
 }
-function deactivate() { }
