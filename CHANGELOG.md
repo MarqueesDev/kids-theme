@@ -5,6 +5,14 @@ Este changelog segue o estilo `Keep a Changelog` e o versionamento semântico (s
 
 ---
 
+📦 [0.4.4] — Correção pendente para lógica de notificação
+
+• Identified - Foi detectado um erro na lógica da versão que controla a exibição da notificação para aplicar o settings.json.
+• Note - A notificação pode não estar sendo exibida corretamente após a instalação ou atualização.
+• Info - Uma correção será implementada na próxima versão para garantir a execução adequada.
+
+---
+
 📦 [0.4.3] — Detecção de versão para aplicar configurações
 
 • Added - Verificação automática da versão da extensão para exibir a notificação de configurações apenas em instalação ou atualização.
